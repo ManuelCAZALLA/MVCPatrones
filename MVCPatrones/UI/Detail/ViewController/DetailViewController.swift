@@ -12,10 +12,11 @@ class DetailViewController: UIViewController {
     var characterData: CharacterModel?
     
     // IBOUTLETS
-    @IBOutlet weak var descriptionDetail: UITextView!
-    @IBOutlet weak var nameDetail: UILabel!
     @IBOutlet weak var imageDetail: UIImageView!
     
+    @IBOutlet weak var nameDetail: UILabel!
+    
+    @IBOutlet weak var descriptionDetail: UITextView!
     // Ciclo de Vida
     override func viewDidLoad() {
         super.viewDidLoad()

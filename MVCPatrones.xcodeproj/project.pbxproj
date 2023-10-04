@@ -53,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C6711FF2ACD6C0B00A4FAC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C67749E2ACB5E9F00D8414E /* HomeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C6712002ACD6C1600A4FAC7 /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				3C67749D2ACB5E9F00D8414E /* HomeTableViewCell.swift */,
+			);
+			path = Viewcontroller;
+			sourceTree = "<group>";
+		};
 		3C6774752ACB496600D8414E = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +149,6 @@
 			children = (
 				3C73AD122ACC8DD400B9EC71 /* View */,
 				3C73AD112ACC8DBF00B9EC71 /* ViewController */,
-				3C67748C2ACB496A00D8414E /* LaunchScreen.storyboard */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -141,8 +156,8 @@
 		3C73AD0A2ACC8CDF00B9EC71 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3C67749D2ACB5E9F00D8414E /* HomeTableViewCell.swift */,
-				3C67749E2ACB5E9F00D8414E /* HomeTableViewCell.xib */,
+				3C6712002ACD6C1600A4FAC7 /* Viewcontroller */,
+				3C6711FF2ACD6C0B00A4FAC7 /* View */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -206,6 +221,7 @@
 		3C73AD122ACC8DD400B9EC71 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C67748C2ACB496A00D8414E /* LaunchScreen.storyboard */,
 				3C6774962ACB53F200D8414E /* SplashViewController.xib */,
 			);
 			path = View;

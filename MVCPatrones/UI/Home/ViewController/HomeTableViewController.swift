@@ -12,6 +12,11 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Ciclo De Vida
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCell()
+        
+    }
+    
+    private func registerCell() {
         tableView?.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
     }
     // MARK: - Table view data source
@@ -22,14 +27,16 @@ class HomeTableViewController: UITableViewController {
         }
         
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           
-            return sampleCharacterData.count
+           return sampleCharacterData.count
         }
-       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell
         else {
             return UITableViewCell()
         }
+        
         if(indexPath.row < sampleCharacterData.count) {
             let data =  sampleCharacterData[indexPath.row]
             let homeData = HomeCellModel(image: data.image, name: data.name)
@@ -37,7 +44,8 @@ class HomeTableViewController: UITableViewController {
         }
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+       override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = DetailViewController()
         nextVC.characterData = sampleCharacterData[indexPath.row]
         
